@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "8e3141a0-7b6c-4edc-9abd-26aa4cd67a73",
+		"name": "parcial-programacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38363418"
+	},
+	"item": [
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Catalina\",\r\n    \"dna\": [\"AAAA\",\r\n    \"TTTT\",\r\n    \"CATC\",\r\n    \"TTAT\"\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/human/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"human",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/human/stats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"human",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
