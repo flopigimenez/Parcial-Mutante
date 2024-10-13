@@ -5,7 +5,7 @@ Esta API determina si un ADN es mutante o no.
 ## Contenidos
 - [Introducción](#introducción)
 - [Requisitos](#requisitos)
-- [Instalación](#instalación)
+- [Repositorio en GitHub](#repositorio-en-github)
 - [Configuración de la base de datos](#configuración-de-la-base-de-datos)
 - [Despliegue en Render](#despliegue-en-render)
 - [Probar la API localmente](#probar-la-api-localmente)
@@ -26,19 +26,9 @@ Esta API está desarrollada con Spring Boot. Permite determinar si un ADN es mut
 - Postman
 
 
-## Instalación
-1. Clona el repositorio:
-
-    ```bash
-    git clone https://github.com/flopigimenez/Parcial-Mutante.git
-    cd Parcial-Mutante
-    ```
-
-2.Compilar y ejecutar el proyecto:
-
-Desde la terminal, navega hasta la carpeta del proyecto y ejecuta el siguiente comando:
-./gradlew bootRun
-
+## Repositorio en GitHub
+1. Link del repositorio: https://github.com/flopigimenez/Parcial-Mutante.git
+    
 
 ## Configuración de la base de datos
 El proyecto utiliza una base de datos **H2**. Está disponible en `http://localhost:8080/h2-console`.
