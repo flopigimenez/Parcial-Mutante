@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Catalina\",\r\n    \"dna\": [\"AAAA\",\r\n    \"TTTT\",\r\n    \"CATC\",\r\n    \"TTAT\"\r\n    ]\r\n}\r\n",
+					"raw": "{\r\n    \"name\": \"Marta\",\r\n    \"dna\": [\"AAAACG\",\r\n    \"ACATTG\",\r\n    \"CCCTTG\",\r\n    \"ACTCGG\",\r\n    \"TTATCG\",\r\n    \"TTAGGC\"\r\n    ]\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"

@@ -17,6 +17,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
+//Test HumanService
 @SpringBootTest
 public class HumanServiceTest {
     @BeforeAll
@@ -45,6 +46,7 @@ public class HumanServiceTest {
     @Autowired
     private HumanService humanService;
 
+    //Test para verificar que se lanza una excepción cuando el adn es nulo o vacío
     @Test
     public void testSave_shouldThrowException_null() {
         HumanDto humanDto = new HumanDto();
@@ -55,6 +57,7 @@ public class HumanServiceTest {
                 .hasMessage("El ADN no puede ser nulo o vacío");
     }
 
+    //Test para verificar que se lanza una excepción cuando el adn contiene letras no permitidas
     @Test
     public void testSave_shouldThrowException_letter() {
         List<String> dna = new ArrayList<>();
@@ -73,6 +76,7 @@ public class HumanServiceTest {
                 .hasMessage("Solo puede contener las letras A,T,C,G");
     }
 
+    //Test para verificar que se lanza una excepción cuando el adn no tiene una dimensión es NxN
     @Test
     public void testSave_shouldThrowException_size() {
         List<String> dna = new ArrayList<>();
@@ -91,6 +95,7 @@ public class HumanServiceTest {
                 .hasMessage("El adn debe tener una dimension de NxN");
     }
 
+    //Test para verificar que se lanza una excepción cuando el adn ya existe
     @Test
     public void testSave_shouldThrowException_exist(){
         List<String> dna = new ArrayList<>();
@@ -112,6 +117,7 @@ public class HumanServiceTest {
 
     }
 
+    //Test para verificar que el adn es mutante
     @Test
     public void testSave_ismutant(){
         List<String> dna = new ArrayList<>();
@@ -128,6 +134,7 @@ public class HumanServiceTest {
         assertThat(ismutant).isTrue();
     }
 
+    //Test para verificar que el adn no es mutante
     @Test
     public void testSave_notmutant() {
         List<String> dna = new ArrayList<>();
@@ -144,7 +151,8 @@ public class HumanServiceTest {
         assertThat(notmutant).isFalse();
     }
 
-    //Test enviados por el profe
+    //Tests enviados por el profe
+    //Verificar mutante
     @Test
     public void testSave_ismutant_1(){
         List<String> dna = new ArrayList<>();
@@ -159,6 +167,7 @@ public class HumanServiceTest {
         assertThat(ismutant).isTrue();
     }
 
+    //Verificar mutante
     @Test
     public void testSave_ismutant_2(){
         List<String> dna = new ArrayList<>();
@@ -173,6 +182,7 @@ public class HumanServiceTest {
         assertThat(ismutant).isTrue();
     }
 
+    //Verificar mutante
     @Test
     public void testSave_ismutant_3(){
         List<String> dna = new ArrayList<>();
@@ -187,6 +197,7 @@ public class HumanServiceTest {
         assertThat(ismutant).isTrue();
     }
 
+    //Verificar mutante
     @Test
     public void testSave_ismutant_4(){
         List<String> dna = new ArrayList<>();
@@ -206,6 +217,7 @@ public class HumanServiceTest {
         assertThat(ismutant).isTrue();
     }
 
+    //Verificar mutante
     @Test
     public void testSave_ismutant_5(){
         List<String> dna = new ArrayList<>();
@@ -225,6 +237,7 @@ public class HumanServiceTest {
         assertThat(ismutant).isTrue();
     }
 
+    //Verificar no mutante
     @Test
     public void testSave_notmutant_1() {
         List<String> dna = new ArrayList<>();
@@ -239,6 +252,7 @@ public class HumanServiceTest {
         assertThat(notmutant).isFalse();
     }
 
+    //Verificar no mutante
     @Test
     public void testSave_notmutant_2() {
         List<String> dna = new ArrayList<>();
@@ -253,6 +267,7 @@ public class HumanServiceTest {
         assertThat(notmutant).isFalse();
     }
 
+    //Test para verificar las estadísticas de mutantes y humanos
     @Test
     public void testStats(){
         Long countMutantDna = 5L;

@@ -12,6 +12,8 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
+
+//Entidad de Human
 public class Human {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +29,7 @@ public class Human {
     @Column(name = "is_mutant")
     private boolean ismutant;
 
+    //Método para convertir la lista de adn a un string
     public void SetStrDna(){
         this.strDna = String.join("-", this.dna);
     }

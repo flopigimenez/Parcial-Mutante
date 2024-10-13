@@ -7,6 +7,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+//Test HumanRepository
 @DataJpaTest
 public class HumanRepositoryTest {
     @BeforeAll
@@ -32,6 +33,7 @@ public class HumanRepositoryTest {
     @Autowired
     private HumanRepository humanRepository;
 
+    //Test para verificar si el adn existe en la base de datos
     @Test
     public void testExistsByStrDna() {
         Human human = new Human();
@@ -45,6 +47,7 @@ public class HumanRepositoryTest {
         assertThat(notExists).isFalse();
     }
 
+    //Test para verificar el conteo de adn mutantes y no mutantes
     @Test
     public void testCountByIsmutant(){
         Human human = new Human();

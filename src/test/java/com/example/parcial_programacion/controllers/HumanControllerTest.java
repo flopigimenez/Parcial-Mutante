@@ -21,6 +21,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+//Test HumanController
 @WebMvcTest(controllers = HumanController.class)
 public class HumanControllerTest {
     @BeforeAll
@@ -52,6 +53,7 @@ public class HumanControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
+    //Test para verificar que el adn es mutante
     @Test
     public void testSave_isMutant() throws Exception{
         List<String> dna = new ArrayList<>();
@@ -75,6 +77,7 @@ public class HumanControllerTest {
 
     }
 
+    //Test para verificar que el adn no es mutante
     @Test
     public void testSave_notMutant() throws Exception {
         List<String> dna = new ArrayList<>();
@@ -98,6 +101,7 @@ public class HumanControllerTest {
 
     }
 
+    //Test para verificar que se lanza una excepción cuando el adn es inválido
     @Test
     public void testSave_shouldThrowException() throws Exception {
         HumanDto humanDto = new HumanDto();
@@ -112,6 +116,7 @@ public class HumanControllerTest {
                 .andExpect(content().string("Error al guardar la persona: null"));
     }
 
+    //Test para verificar las estadísticas de mutantes y humanos
     @Test
     public void testStats() throws Exception{
         StatsDto statsDto = StatsDto.builder()

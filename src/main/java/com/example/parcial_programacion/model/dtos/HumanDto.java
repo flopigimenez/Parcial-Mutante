@@ -11,6 +11,8 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
+
+//Dto de Human
 public class HumanDto {
     private String name;
     private List<String> dna;
