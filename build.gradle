@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.3.4'
 	id 'io.spring.dependency-management' version '1.1.6'
+	id 'jacoco'
 }
 
 group = 'com.example'
@@ -55,4 +56,22 @@ tasks.jar {
 
 bootJar {
 	enabled = true
+}
+
+jacoco {
+	toolVersion = "0.8.10" // Asegúrate de utilizar la última versión
+}
+
+test {
+	useJUnitPlatform() // Si estás usando JUnit 5
+	finalizedBy jacocoTestReport // Generar el reporte después de las pruebas
+}
+
+jacocoTestReport {
+	dependsOn test // Generar el reporte después de ejecutar las pruebas
+	reports {
+		xml.required = true
+		csv.required = false
+		html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+	}
 }
